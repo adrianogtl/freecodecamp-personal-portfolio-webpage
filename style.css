@@ -1,8 +1,8 @@
 :root {
   --color1: darkblue;
   --color2: white;
-  --color3: #2a2a2a;
-  --color4: #1e1e1e;
+  --color3: #0d1117;
+  --color4: #010409;
 }
 
 * {
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background: linear-gradient(90deg, var(--color3), var(--color4));
+  background-color: var(--color3);
   color: var(--color2);
 }
 
@@ -31,12 +31,6 @@ main {
 h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
-}
-
-h2 {
-  margin-bottom: 2rem;
-  font-size: 3rem;
-  text-align: center;
 }
 
 p {
@@ -79,10 +73,6 @@ a {
   width: 100%;
 }
 
-#projects a {
-  display: block;
-}
-
 .project {
   background-color: var(--color4);
 }
@@ -109,28 +99,10 @@ a {
 
 .six {background-image: url(images/counter.jpg);}
 
-.project-title {
+.project-tile {
   text-align: center;
   line-height: 5rem;
   height: 5rem;
-}
-
-.project-title::before,
-.project-title::after {
-  visibility: hidden;
-}
-
-.project-title:hover:before,
-.project-title:hover:after {
-  visibility: visible;
-}
-
-.project-title::before {
-  content: "<";
-}
-
-.project-title::after {
-  content: "/>";
 }
 
 #contact {
@@ -143,13 +115,35 @@ a {
 
 .contact-link {
   display: block;
-  padding-right: 2rem;
-  font-size: 2.5rem;
+  padding-right: 1rem;
+  font-size: 2rem;
 }
 
 ion-icon {
   vertical-align: text-bottom;
   padding-right: .3rem;
+}
+
+@media screen and (min-width: 600px) {
+  .link::before {
+    content: "<";
+    visibility: hidden;
+  }
+
+  .link::after {
+    content: "/>";
+    visibility: hidden;
+  }
+
+  .link:hover::before,
+  .link:hover::after {
+    visibility: visible;
+  }
+
+  .contact-link {
+    padding-right: 2rem;
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
