@@ -28,9 +28,18 @@ main {
   margin: 0 auto;
 }
 
+h1,
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 1rem;
+}
+
 h1 {
   font-size: 4rem;
-  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.3rem;
 }
 
 p {
@@ -40,6 +49,10 @@ p {
 a {
   color: var(--color2);
   text-decoration: none;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 #navbar {
@@ -87,17 +100,17 @@ a {
   background-size: cover;
 }
 
-.one {background-image: url(images/suvey.jpg);}
+.one {background-image: url(assets/suvey.jpg);}
 
-.two {background-image: url(images/tribute-page.jpg);}
+.two {background-image: url(assets/tribute-page.jpg);}
 
-.three {background-image: url(images/documentation.jpg);}
+.three {background-image: url(assets/documentation.jpg);}
 
-.four {background-image: url(images/product-landing.jpg);}
+.four {background-image: url(assets/product-landing.jpg);}
 
-.five {background-image: url(images/parallax.jpg);}
+.five {background-image: url(assets/parallax.jpg);}
 
-.six {background-image: url(images/counter.jpg);}
+.six {background-image: url(assets/counter.jpg);}
 
 .project-tile {
   text-align: center;
