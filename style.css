@@ -1,6 +1,6 @@
 :root {
-  --color1: darkblue;
-  --color2: white;
+  --color1: #00008b;
+  --color2: #ffffff;
   --color3: #0d1117;
   --color4: #010409;
 }
@@ -29,21 +29,32 @@ main {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: 'Courier New', Courier, monospace;
-  margin-bottom: 1rem;
 }
 
 h1 {
+  margin-bottom: 4rem;
   font-size: 4rem;
 }
 
 h2 {
-  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  font-size: 3.2rem;
+}
+
+h3 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 p {
   font-size: 2rem;
+}
+
+section > p:last-child {
+  margin-top: 2rem;
 }
 
 a {
@@ -79,6 +90,7 @@ a {
 }
 
 #projects {
+  padding-top: 7rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
   justify-content: center;
@@ -112,7 +124,7 @@ a {
 
 .six {background-image: url(assets/counter.jpg);}
 
-.project-tile {
+.project-title {
   text-align: center;
   line-height: 5rem;
   height: 5rem;
@@ -123,7 +135,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
 }
 
 .contact-link {
@@ -137,6 +149,38 @@ ion-icon {
   padding-right: .3rem;
 }
 
+footer {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  padding: 10px;
+}
+
+#scrollToTop {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 50;
+  right: 50;
+  width: fit-content;
+  height: fit-content;
+  animation: arrowUp 1s ease-in-out infinite;
+}
+
+@keyframes arrowUp {
+  0% {
+    transform: translateY(0);
+  }
+  
+  50% {
+    transform: translateY(-10px);
+  }
+  
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @media screen and (min-width: 600px) {
   .link::before {
     content: "<";
@@ -148,6 +192,8 @@ ion-icon {
     visibility: hidden;
   }
 
+  .project:hover .link::before,
+  .project:hover .link::after,
   .link:hover::before,
   .link:hover::after {
     visibility: visible;
